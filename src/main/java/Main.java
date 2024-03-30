@@ -16,13 +16,15 @@ public class Main {
         Company yandex = new Company("Yandex", publisher, 95000);
         Company geekBrains = new Company("GeekBrains", publisher, 98000);
 
-        Junior student1 = new Junior("Студент #1");
-        Senior master1 = new Senior("Мастер #1");
-        Senior master2 = new Senior("Мастер #2");
+        Junior student1 = new Junior("Джуниор #1");
+        Senior master1 = new Senior("Сеньер #1");
+        Senior master2 = new Senior("Сеньер #2");
+        Middle middle1 = new Middle("Миддл №1");
 
         publisher.registerObserver(student1);
         publisher.registerObserver(master1);
         publisher.registerObserver(master2);
+        publisher.registerObserver(middle1);
 
         for (int i = 0; i < 3; i++){
             google.needEmployee();
