@@ -4,7 +4,12 @@ public class Vacancy {
     private int requirements;
     private String company;
     private int salary;
+
     private VacancyType type;
+
+    public VacancyType getType() {
+        return type;
+    }
 
     public Vacancy(String title, String description, int requirements, String company, int salary, VacancyType type) {
         this.title = title;

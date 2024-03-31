@@ -20,4 +20,8 @@ public class Company {
         jobAgency.sendAllVacancies();
 
     }
+
+    public  void needExactlyEmployee(VacancyType type){
+        jobAgency.sendSelectedVacancies(type);
+    }
 }

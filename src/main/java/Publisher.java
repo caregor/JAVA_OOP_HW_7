@@ -11,4 +11,6 @@ public interface Publisher {
     void registerVacancy(Vacancy vacancy);
 
     void sendAllVacancies();
+
+    void sendSelectedVacancies(VacancyType type);
 }

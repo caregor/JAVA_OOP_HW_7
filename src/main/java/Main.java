@@ -16,8 +16,6 @@ public class Main {
 
         Publisher publisher = new JobAgency();
         Company google = new Company("Google", publisher);
-//        Company yandex = new Company("Yandex", publisher, 95000);
-//        Company geekBrains = new Company("GeekBrains", publisher, 98000);
 
         Junior student1 = new Junior("Джуниор #1", 12);
         Senior master1 = new Senior("Сеньер #1", 36);
@@ -39,19 +37,14 @@ public class Main {
         publisher.registerObserver(master1);
         publisher.registerObserver(middle1);
 
-        google.needEmployee();
+        google.needExactlyEmployee(VacancyType.QA_ENGINEER);
 
-//        for (int i = 0; i < 3; i++) {
-//           google.needEmployee();
-//            yandex.needEmployee();
-//            geekBrains.needEmployee();
-//        }
 
         publisher.removeObserver(student1);
         publisher.removeObserver(master1);
         publisher.removeObserver(middle1);
 
-        System.out.println("--------Попытка №2 нйти работу--------");
+        System.out.println("--------Попытка №2 нйти работника. Рассылаем все вакансии--------");
 
         google.needEmployee();
 

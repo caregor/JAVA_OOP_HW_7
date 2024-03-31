@@ -20,7 +20,15 @@ public class JobAgency implements Publisher{
         }
     }
 
-    public Collection<Vacancy> filterVacanciesByType(VacancyType vacancyType) {
+    public void sendSelectedVacancies(VacancyType type){
+        for (Observer observer: observers) {
+            for (Vacancy vacancy: filterVacanciesByType(type)){
+                observer.reciveVanacy(vacancy);
+            }
+        }
+    }
+
+    private Collection<Vacancy> filterVacanciesByType(VacancyType vacancyType) {
         Collection<Vacancy> filteredVacancies = new ArrayList<>();
         for (Vacancy vacancy : vacancies) {
             if (vacancy.getType() == vacancyType) {
