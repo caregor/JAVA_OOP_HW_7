@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+
 public class JobAgency implements Publisher{
 
     private Collection<Observer> observers = new ArrayList<>();
@@ -18,6 +20,15 @@ public class JobAgency implements Publisher{
         }
     }
 
+    public Collection<Vacancy> filterVacanciesByType(VacancyType vacancyType) {
+        Collection<Vacancy> filteredVacancies = new ArrayList<>();
+        for (Vacancy vacancy : vacancies) {
+            if (vacancy.getType() == vacancyType) {
+                filteredVacancies.add(vacancy);
+            }
+        }
+        return filteredVacancies;
+    }
 
     @Override
     public void registerObserver(Observer observer) {
