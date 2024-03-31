@@ -1,0 +1,6 @@
+public enum VacancyType {
+    SOFTWARE_ENGINEER,
+    DATA_SCIENTIST,
+    PRODUCT_MANAGER,
+    QA_ENGINEER
+}

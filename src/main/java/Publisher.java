@@ -1,7 +1,14 @@
-public interface Publisher {
-    void sendOffer(String companyName, int salary);
+import java.util.Collection;
 
+
+public interface Publisher {
+
+    void sendOffer(String companyName, int salary);
     void registerObserver(Observer observer);
+
     void removeObserver(Observer observer);
 
+    void registerVacancy(Vacancy vacancy);
+
+    void sendAllVacancies();
 }
